@@ -1,0 +1,55 @@
+<h2>Add a Doctor</h2>
+<br>
+
+<form method = "post" action='/doctors/add'>
+    <div>
+        <label>FullName :</label>
+        <input type = "text" name = "full_name">
+    </div>
+    <div>
+        <label>Category :</label>
+        <select name="category">
+        {{#each categories}}
+            <option value="{{name}}">{{name}}</option>
+        {{/each}}
+        </select>
+    </div>
+    <div>
+        <label>Acception New Patients :</label>
+        <select name = "new_patients">
+            <option value="true">Yes</option>
+            <option vlaue="false">No</option>
+        </select>
+    </div>
+
+    <div>
+        <label>Practice Name :</label>
+        <input type="text" name="practice_name">
+    </div>
+    
+    <div>
+        <label>Graduation Year :</label>
+        <input type="text" name="graduation_year">
+    </div>
+
+    <div>
+        <label>City :</label>
+        <input type="text" name="city">
+    </div>
+
+    <div>
+        <label>Select a State :</label>
+        <select name="state">
+            <option value = "0"> Select a State</option>
+            <option value = "AL">Albama</option>
+            <option value = "AK">Alaska</option>
+            <option value = "CA">California</option>
+            <option value = "CO">Colorado</option>
+            <option value = "FL">Florida</option>
+            <option value = "HI">Huawaii</option>
+            <option value = "id">Idaho</option>
+
+        </select>
+    </div>
+    <input type="submit" value="Add a Doctor">
+</form>
